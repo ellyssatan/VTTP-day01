@@ -1,6 +1,7 @@
 package myapp.core;
 
 import java.io.Console;
+import java.text.DecimalFormat;
 
 public class Math {
     public static void main(String[] args) {
@@ -17,14 +18,15 @@ public class Math {
         } else if (operator.equals("div")) {
             float nF1 = num1;
             float nF2 = num2;
-            System.out.printf("The answer for " + num1 + " / " + num2 + " = " + (nF1/nF2));
+            DecimalFormat df = new DecimalFormat("###.###");
+            System.out.printf("The answer for " + num1 + " / " + num2 + " = " + df.format(nF1/nF2));
 
         } else if (operator.equals("sub")) {
             System.out.println("The answer for " + num1 + " - " + num2 + " = " + (num1 - num2));
     
         } else if (operator.equals("mul")) {
             System.out.println("The answer for " + num1 + " * " + num2 + " = " + (num1 * num2));
-            
+
         } else {
             System.out.println("Invalid Operator, try again");
         }
