@@ -19,10 +19,10 @@ public class Greetings {
         
         String age = cons.readLine("How old are you?\n");
         age = age.trim();
-        if (age.length() < 2) {
-            System.out.println("You are a kid");
+        if (age.length() > 0) {
+            System.out.printf("Wow, you are %s", age);
         } else {
-            System.out.printf("You old, %s", age);
+            System.out.println("Please input age");
         }
 
 
